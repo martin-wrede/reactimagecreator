@@ -22,7 +22,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          "Authorization": `Bearer ${import.meta.env.VITE_OPEN_AI_API_KEY}`,
         },
         body: JSON.stringify({
           model: "dall-e-3", // You can also try "dall-e-2" if needed
