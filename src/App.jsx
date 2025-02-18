@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const OPENAI_API_KEY = VITE_OPENAI_API_KEY; // import.meta.env.VITE_OPENAI_API_KEY;
+// const OPENAI_API_KEY = VITE_OPENAI_API_KEY; // import.meta.env.VITE_OPENAI_API_KEY;
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -22,7 +22,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${OPENAI_API_KEY}`,
+          "Authorization": `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
           model: "dall-e-3", // You can also try "dall-e-2" if needed
